@@ -43,20 +43,15 @@ const ReviewsText = Reviews.map(review => {
   return review.reviews[0].text
 }); 
 
-const ReviewerRating = Reviews.map(review => {
-  return review[0].rating
-});
-
 const ReviewerUserName = Reviews.map(review => {
-  return review[0].user.name  
+  return review.reviews[0].user.name 
 });
 
-for (i = 0; i < 5; i++)
+for (let i = 0; i < 5; i++)
 {
   console.log('Business Name: ' + BusinessesName[i])
-  console.log('Bunisess Address: ' + AddressesStreet[i] + ',' + AddressesCity[i])
+  console.log('Bunisess Address: ' + AddressesStreet[i] + ', ' + AddressesCity[i])
   console.log('Review: ' + ReviewsText[i])
-  console.log('Rating: ' + ReviewerRating[i])
   console.log('User Review Name: ' + ReviewerUserName[i])
 }
 
